@@ -16,11 +16,15 @@ export const AuthProvider = ({ children }) => {
     });
   };
   const onclickhandler = (e) => {
-    setNewinput([input, ...newinput]);
-    setInput({
-      title: "",
-      text: "",
-    })
+    if (input.title == "" || input.text == "") {
+      alert("Please fill all the fields!");
+    } else {
+      setNewinput([input, ...newinput]);
+      setInput({
+        title: "",
+        text: "",
+      });
+    }
   };
   const onclearhandler = (e) => {
     setNewinput([]);
@@ -30,7 +34,7 @@ export const AuthProvider = ({ children }) => {
     onclickhandler,
     onclearhandler,
     newinput,
-    input
+    input,
   };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

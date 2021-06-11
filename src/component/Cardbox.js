@@ -40,7 +40,9 @@ const Cardbox = (props) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" style={{textAlign:'center',margin:'auto'}}>Learn More</Button>
+          <Button size="small" style={{ textAlign: "center", margin: "auto" }}>
+            Learn More
+          </Button>
         </CardActions>
       </Card>
     </>
